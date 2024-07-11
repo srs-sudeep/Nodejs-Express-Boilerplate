@@ -26,7 +26,7 @@
   },
   "config": {
     "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
+      "path": "@commitlint/cz-commitlint"
     }
   },
   "keywords": [
@@ -82,7 +82,7 @@
     "commitizen": "^4.3.0",
     "globals": "^15.8.0",
     "husky": "^9.0.11",
-    "inquirer": "9"
+    "inquirer": "8"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
