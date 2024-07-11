@@ -1,0 +1,5 @@
+#!/usr/bin/env sh
+# bun test
+bun lint-staged
+bun lint:fix
+bun prettier:fix
