@@ -26,7 +26,7 @@
   },
   "config": {
     "commitizen": {
-      "path": "@commitlint/cz-commitlint"
+      "path": "./node_modules/cz-conventional-changelog"
     }
   },
   "keywords": [
