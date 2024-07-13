@@ -1,0 +1,6 @@
+version: '1'
+
+services:
+  node-app:
+    container_name: StudentX360-Server
+    command: bun start
