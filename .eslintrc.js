@@ -6,6 +6,7 @@ var MAX_STATEMENTS = 10;
 module.exports = {
   env: {
     node: true,
+    commonjs: true,
     jest: true,
   },
   extends: ['airbnb-base', 'plugin:jest/recommended', 'plugin:security/recommended', 'plugin:prettier/recommended'],

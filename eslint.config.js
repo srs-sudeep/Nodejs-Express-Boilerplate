@@ -6,6 +6,6 @@ export default [
   {
     ignores: ['bin', '.husky', 'commitlint.config.js', 'eslint.config.js', 'node_modules'],
   },
-  { languageOptions: { globals: globals.browser } },
+  { languageOptions: { globals: { ...globals.node } } },
   pluginJs.configs.recommended,
 ];
