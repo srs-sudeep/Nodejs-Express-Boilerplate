@@ -14,13 +14,13 @@
     "coverage:coveralls": "jest -i --coverage --coverageReporters=text-lcov | coveralls",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "prettier": "prettier --check src/**/*.{js}",
-    "prettier:fix": "prettier --write src/**/*.{js}",
+    "prettier": "prettier --check src/**/*.js",
+    "prettier:fix": "prettier --write src/**/*.js",
     "docker:prod": "docker-compose -f docker-compose.yml -f docker-compose.prod.yml up",
     "docker:dev": "docker-compose -f docker-compose.yml -f docker-compose.dev.yml up",
     "docker:test": "docker-compose -f docker-compose.yml -f docker-compose.test.yml up",
     "prepare": "node .husky/install.mjs",
-    "commit": "git-cz"
+    "commit": "git commit"
   },
   "config": {
     "commitizen": {
@@ -73,6 +73,7 @@
     "passport-jwt": "^4.0.1",
     "path": "^0.12.7",
     "pm2": "^7.0.1",
+    "prettier": "^3.8.3",
     "swagger-jsdoc": "^6.2.8",
     "swagger-ui-express": "^5.0.1",
     "validator": "^13.15.35",
