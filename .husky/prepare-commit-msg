@@ -1,3 +1,5 @@
 #!/usr/bin/env sh
 
-exec < /dev/tty && npx cz --hook || true
+if [ -z "$CZ_SKIP_HOOK" ]; then
+  exec < /dev/tty && npx cz --hook || true
+fi
