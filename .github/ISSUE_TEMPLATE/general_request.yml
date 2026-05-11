@@ -1,0 +1,33 @@
+name: General Report
+description: Provide general feedback or inquiries
+title: "[General]: "
+labels:
+  - general
+body:
+  - type: input
+    id: module
+    attributes:
+      label: Module
+      description: Which module is this about?
+      placeholder: e.g., auth, billing, ui
+  - type: textarea
+    id: feedback_inquiry
+    attributes:
+      label: Feedback or Inquiry
+      description: Provide your feedback or inquiry.
+    validations:
+      required: true
+  - type: textarea
+    id: related_commits
+    attributes:
+      label: Related commits
+      description: Paste one commit per line (SHA or URL).
+      placeholder: |
+        abc1234
+        def5678
+      render: shell
+  - type: textarea
+    id: additional_info
+    attributes:
+      label: Additional Information
+      description: Add any other relevant details here.
