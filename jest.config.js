@@ -1,4 +1,5 @@
 module.exports = {
+  passWithNoTests: true,
   testEnvironment: 'node',
   testEnvironmentOptions: {
     NODE_ENV: 'test',

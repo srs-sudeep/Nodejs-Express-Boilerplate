@@ -1,6 +1,6 @@
 const jwt = require('jsonwebtoken');
 const moment = require('moment');
-const httpStatus = require('http-status');
+const httpStatus = require('../../../utils/httpStatus');
 const config = require('../../../config/config');
 const userService = require('../userServices/user.service');
 const { Token } = require('../../../models');

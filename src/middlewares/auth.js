@@ -1,5 +1,5 @@
 const passport = require('passport');
-const httpStatus = require('http-status');
+const httpStatus = require('../utils/httpStatus');
 const ApiError = require('../utils/ApiError');
 const { roleRights } = require('../config/roles');
 
