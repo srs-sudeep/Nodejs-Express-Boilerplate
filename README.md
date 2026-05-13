@@ -14,6 +14,7 @@ Use it as a **GitHub template** or clone and rename for your own service.
 - **Errors**: `ApiError`, unified converter/handler, `http-status` v2–compatible helper
 - **Docs**: Swagger / OpenAPI at `/v1/docs/` in `NODE_ENV=development` (short URL `/docs` redirects there in dev)
 - **Tooling**: ESLint, Prettier, Husky, Commitlint, Jest (no sample tests yet; `passWithNoTests` enabled)
+- **Documentation site**: [Docusaurus](https://docusaurus.io/) in `website/` — architecture, E2E procedures, Docker, commands ([run locally](#documentation-site-docusaurus))
 
 ## Requirements
 
@@ -61,6 +62,22 @@ Use it as a **GitHub template** or clone and rename for your own service.
    - API base: `/v1`
    - Swagger (development only): `http://localhost:3000/v1/docs/` or `http://localhost:3000/docs` (redirects in dev)
 
+## Documentation site (Docusaurus)
+
+Full **architecture**, **request flow**, **Docker workflows**, and **command** procedures live in the static docs app under `website/`.
+
+```bash
+cd website && npm install && npm run start
+```
+
+Or from the repo root:
+
+```bash
+npm run docs:dev
+```
+
+Use a **different port** than the API only if both are bound to the same port (the docs site defaults to **4000** via `website/package.json`). See _Maintaining the documentation site_ for overrides and GitHub Pages `baseUrl` notes.
+
 ## Environment variables
 
 | Variable                                                                 | Description                                                                                            |
@@ -89,10 +106,14 @@ See `.env.example` for placeholders.
 | `npm run lint` / `npm run lint:fix`                  | ESLint                                                       |
 | `npm run prettier` / `npm run prettier:fix`          | Prettier on `src/**/*.js`                                    |
 | `npm run docker:dev` / `docker:prod` / `docker:test` | Compose stacks (extra compose files must exist in your tree) |
+| `npm run docs:dev`                                   | Docusaurus dev server (`website/`)                           |
+| `npm run docs:build`                                 | Static build → `website/build/`                              |
+| `npm run docs:serve`                                 | Serve the built docs site locally                            |
 
 ## Project layout
 
 ```text
+website/               # Docusaurus documentation (separate package.json)
 src/
   app.js                 # Express app, middleware order, /v1 mount
   index.js               # HTTP server, DB connect, graceful signals
